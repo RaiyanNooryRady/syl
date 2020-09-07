@@ -1,0 +1,76 @@
+body{
+	 background: black;
+	 color: white;
+	 font-size: 15pt;
+	 width: 100%
+}
+a{
+	color: orange;
+}
+a:hover
+{
+	color: black;
+	background: cyan;
+
+}
+.purplelink:hover
+{
+	color:purple;
+	background: white;
+}
+.greenlink:hover
+{
+	color:green;
+	background: white;
+}
+.redlink:hover
+{
+	color:red;
+	background: white;
+}
+.bluelink:hover
+{
+	color: blue;
+	background: white;
+}
+.orangelink:hover
+{
+	color: orange;
+	background: white;
+}
+.cyanlink:hover
+{
+	color: cyan;
+	background: white;
+}
+h1
+{
+	font-family:"Times New Roman" serif;
+	/*font-family: monospace;*/
+	/*font-size: 50pt;*/
+	 color: cyan;
+}
+h2
+{
+	/*font-family: monospace;*/
+	font-family:"Times New Roman" serif;
+	/*font-size: 20pt;*/
+	color: yellow;
+}
+h3
+{
+	color: yellow;
+}
+h4
+{
+	color: cyan;
+}
+
+.indent
+{
+	margin-left: 280px;
+}
+.gap_below
+{
+	margin: 25px;
+}

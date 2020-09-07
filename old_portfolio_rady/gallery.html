@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Projects</title>
+	<link rel="stylesheet"type="text/css"href="bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="1st.css">
+	<script src=" http://code.jquery.com/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+	<a href="index.html" class="redlink">Home</a>
+&nbsp;
+
+<a href="programming.html" class="bluelink">Profile</a>
+&nbsp;
+
+<a href="about.html">About</a>
+&nbsp;
+
+<a href="contact.html" class="greenlink">Contact</a>
+&nbsp;
+
+
+<a href="ach.html" class="greenlink">Achievements</a>
+&nbsp;
+
+<a href="gallery.html" class="purplelink">Projects</a>
+<hr></hr>
+<h2 id="title" onclick="changeheading();">Projects Done By Me</h2>
+<!--<script type="text/javascript"> $('#title').html('My Gallery');</script>-->
+I developed most of them for learning purposes only. Now I am working for developing some professional sites.<br>
+Click the big image to start/pause slide show.
+<script type="text/javascript">
+    function changeheading(){
+        console.log("My Projects");
+        $("#title").html("My Projects");
+        $("#title").click(function () {
+            $("#title").html("Projects Done By Me");
+            $("#title").off("click");
+        });
+    };
+</script>
+	  
+<div class="row">
+			<div class="col-md-2">
+				<img id="image1" class="crop-img" 
+				  src="1.png" width="40%%" 
+				  alt="University of Michigan Project"/> 
+			</div>
+			<div class="col-md-2">
+				<img id="image2" class="crop-img" 
+				  src="3.png"  width="50%" 
+				  alt="Nerds Lab Lite-(for practice only)"/> 
+			</div>
+			<div class="col-md-2">
+				<img id ="image3" class="crop-img" 
+				  src="4.png"  width="40%" 
+				  alt="This Project"/> 
+			</div>
+			<div class="col-md-2">
+				<img id ="image4" class="crop-img" 
+				  src="2.png"  width="45%" 
+				  alt="My Personal website"/> 
+			</div>
+
+			
+		</div>
+	
+		<div class="row">
+			<div class="col-md-12">
+				<button id="backward">&lt;</button>
+				<img id="bigImage" 
+				  class="large-img" 
+				  src="2.png" width="45%" 
+				  alt="University of Michigan Project"/> 
+				  <button id="forward">&gt;</button>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		
+		var paused = false;
+
+		$(".crop-img").click(function(){
+			$("#bigImage").attr('src', 
+				$(this).attr('src'));
+		});
+
+		var counter = 1;
+	
+		$("#image"+counter).click();
+
+		$("#backward").click(function (){
+		
+			counter = counter - 1;
+			
+			if(counter < 1){
+				counter = 4;
+			}
+			
+			$("#image"+counter).click();
+		});
+
+		$("#forward").click(function (){
+			
+			counter = counter + 1;
+			
+			if(counter > 4){
+				counter = 1;
+			}
+			
+			$("#image"+counter).click();
+		});
+
+		
+		$("#bigImage").click(function (){
+			paused = !paused;
+		});
+
+		
+		setInterval(function (){
+			
+			if(!paused){
+				
+				$("#forward").click();
+			};
+		}, 3000);
+	</script>
+
+<center>Developed by Raiyan Noory Rady<br/>&copy; copyright 2020<br/>All rights reserved.</center>
+
+</body>
+</html>

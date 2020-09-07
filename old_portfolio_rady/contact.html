@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Contact Me</title>
+	<link rel="stylesheet"type="text/css"href="bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="1st.css">
+
+	<script src="https://kit.fontawesome.com/2ee2f3f3ed.js" crossorigin="anonymous"></script>
+	<script src = "http://code.jquery.com/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+<a href="index.html" class="redlink">Home</a>
+&nbsp;
+
+<a href="programming.html" class="bluelink">Profile</a>
+&nbsp;
+
+<a href="about.html">About</a>
+&nbsp;
+
+<a href="contact.html" class="greenlink">Contact</a>
+&nbsp;
+
+
+<a href="ach.html" class="greenlink">Achievements</a>
+&nbsp;
+
+<a href="gallery.html" class="purplelink">Projects</a>
+<hr></hr>
+
+<h1 id="title" onclick="changeheading();">Contact Me</h1>
+<script type="text/javascript">
+    function changeheading(){
+        console.log("Let's be connected.");
+        $("#title").html("Let's be connected.");
+        $("#title").click(function () {
+            $("#title").html("Contact Me");
+            $("#title").off("click");
+        });
+    };
+</script>
+<pre>
+ <a href="https://www.facebook.com/raiyannradyofficial" area-level="facebook" target="_blank" class="bluelink"><i class="fab fa-facebook fa-5x"></i> </a>    <a href="https://www.instagram.com/raiyanrady_official/?hl=en" area-level="instagram" target="_blank" class="redlink"><i class="fab fa-instagram fa-5x"></i></a>       <a href="https://www.linkedin.com/in/raiyan-noory-rady-119215180/" area-level="linkedin" target="_blank" class="cyanlink"><i class="fab fa-linkedin fa-5x"></i></a>       <a href="https://gmail.com" area-level="gmail" target="_blank" class="redlink"><i class="far fa-envelope fa-5x"></i></a>
+
+ <b><i>Email: raiyannooryrady@gmail.com</i></b>
+      </b></pre> 
+     <h2>Get In Touch By Giving Your Informations</h2>
+     <form>
+	Name:<br/>
+	<input type="text" ><br/>
+	Email:<br/>
+	<input type="text"><br/>
+	Phone Number:<br/>
+	<input type="text"><br/>
+	<button id="title"onclick="alert('Your response is recorded.');">Send</button>
+
+
+<center>Developed by Raiyan Noory Rady<br/>&copy; copyright 2020<br/>All rights reserved.</center>
+</form>
+</body>
+</html>

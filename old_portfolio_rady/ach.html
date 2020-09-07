@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Achievements</title>
+	<link rel="stylesheet"
+			  type="text/css"
+			  href="bootstrap.css"
+		      />
+	<link rel="stylesheet" type="text/css" href="1st.css">
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+</head>
+<body>
+	<a href="index.html" class="redlink">Home</a>
+&nbsp;
+
+<a href="programming.html" class="bluelink">Profile</a>
+&nbsp;
+
+<a href="about.html">About</a>
+&nbsp;
+
+<a href="contact.html" class="greenlink">Contact</a>
+&nbsp;
+
+
+<a href="ach.html" class="greenlink">Achievements</a>
+&nbsp;
+
+<a href="gallery.html" class="purplelink">Projects</a>
+<hr></hr>
+<h3>My Achievements</h3>
+<h4>Certifications of Google,Coursera,Udemy etc:</h4>
+<div class="row">
+			<div class="col-md-2">
+				<img id="image1" class="crop-img" 
+				  src="24.png" width="40%%" 
+				  alt="Introduction to html5 by Coursera"/> 
+			</div>
+			<div class="col-md-2">
+				<img id="image2" class="crop-img" 
+				  src="25.jpg"  width="50%" 
+				  alt="Google Code Jam 2020"/> 
+			</div>
+			<div class="col-md-2">
+				<img id ="image3" class="crop-img" 
+				  src="26.jpg"  width="40%" 
+				  alt="Technocracy 2018 by RUET"/> 
+			</div>
+			<div class="col-md-2">
+				<img id ="image4" class="crop-img" 
+				  src="cert.png"  width="40%" 
+				  alt="responsive web basic code with html,css,javascript by coursera"/> 
+			</div>
+
+			
+		</div>
+		
+		<div class="row">
+			<div class="col-md-12">
+				<button id="backward">&lt;</button>
+				<img id="bigImage" 
+				  class="large-img" 
+				  src="25.jpg" width="40%" 
+				  alt="Google Code Jam 2020"/> 
+				  <button id="forward">&gt;</button>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		
+		$(".crop-img").click(function(){
+			$("#bigImage").attr('src', 
+				$(this).attr('src'));
+		});
+
+		
+		var counter = 1;
+	
+		$("#image"+counter).click();
+
+		$("#backward").click(function (){
+			
+			counter = counter - 1;
+			
+			if(counter < 1){
+				counter = 4;
+			}
+			
+			$("#image"+counter).click();
+		});
+
+		
+		$("#forward").click(function (){
+		
+			counter = counter + 1;
+			
+			if(counter > 4){
+				counter = 1;
+			}
+			
+			$("#image"+counter).click();
+		});
+
+		
+		$("#bigImage").click(function (){
+			paused = !paused;
+		});
+
+		
+		setInterval(function (){
+			
+			if(!paused){
+				
+				$("#forward").click();
+			};
+		}, 1000);
+	</script>
+
+	
+<center>Developed by Raiyan Noory Rady<br/>&copy; copyright 2020<br/>All rights reserved.</center>
+</body>
+</html>
